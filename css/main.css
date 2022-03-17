@@ -72,10 +72,12 @@ a {
 .main-message {
   display: flex;
   justify-content: center;
+  top: 35vh;
   align-items: center;
   height: 3em;
   font-size: 2.5rem;
   margin-bottom: 3px;
+  opacity: 0;
 }
 
 .main-message p {
@@ -143,7 +145,6 @@ a {
 .sticky-elem {
   display: none;
   position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
 }
