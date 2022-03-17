@@ -17,6 +17,9 @@ a {
   color: rgb(29, 29, 31);
   text-decoration: none;
 }
+section {
+  border: 3px red solid;
+}
 .local-nav {
   position: absolute;
   top: 45px;
@@ -94,6 +97,11 @@ a {
 
 #scroll-section-2 .main-message {
   font-size: 3.5rem;
+}
+
+#scroll-section-2 .b {
+  top: 15%;
+  left: 45%;
 }
 
 .desc-message {
@@ -182,6 +190,13 @@ a {
   }
   #scroll-section-2 .main-message {
     font-size: 6vw;
+  }
+  #scroll-section-2 .b {
+    top: 20%;
+    left: 53%;
+  }
+  #scroll-section-2 .c {
+    left: 55%;
   }
   .desc-message {
     width: 20%;
