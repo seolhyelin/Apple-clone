@@ -102,9 +102,12 @@
   function setCanvasImages() {
     let imgElem;
     for (let i = 0; i < sceneInfo[0].values.videoImageCount; i++) {
-      imgElem = new Image();
+      imgElem = new Image(); //이미지 객체 만들기
+      imgElem.src = "./video/001/IMG_${6726+i}.JPG";
+      sceneInfo[0].objs.videoImages.push(imgElem);
     }
   }
+  setCanvasImages();
 
   function setLayout() {
     //각 스크롤 섹션의 높이 세팅
@@ -176,6 +179,13 @@
     switch (currentScene) {
       case 0:
         // console.log('0 play');
+        let sequence = Math.round(
+          calcValues(values.imageSequence, currentYOffset)
+        );
+        console.log(sequence);
+
+        objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+
         if (scrollRatio <= 0.22) {
           // in
           objs.messageA.style.opacity = calcValues(
@@ -381,7 +391,6 @@
     if (enterNewScene) return;
     playAnimation();
   }
-
   window.addEventListener("scroll", () => {
     yOffset = window.pageYOffset;
     scrollLoop();
